@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f7fa; /* Light gray background */
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sessions-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .sessions-container + .sessions-container {
+            margin-top: 30px; /* Adds space between the two rows */
+        }
+
+        /* Continuous Pulse Animation */
+        .session {
+            flex: 1;
+            padding: 15px;
+            background-color: #ffffff; /* White background for cards */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s, background-color 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            animation: pulse 2s infinite; /* Apply continuous pulse animation */
+            background-color: #ecf0f1; /* Light blue-gray background for session */
+        }
+
+        /* Hover effect */
+        .session:hover {
+            transform: translateY(-5px);
+            background-color: #2980b9; /* Blue background on hover */
+            color: white; /* Text color change on hover */
+        }
+
+        /* Pulse animation: scale up and down */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05); /* Scale up */
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Fade-in effect on page load */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .session {
+            animation: fadeIn 1s ease-out;
+        }
+
+        .description {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ffffff; /* White background for description */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .description h3 {
+            margin-top: 0;
+            color: #34495e; /* Dark gray text color */
+        }
+
+        .description p {
+            color: #555; /* Medium gray text color */
+            line-height: 1.6;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: #ffffff; /* White background for modal */
+            padding: 20px;
+            border-radius: 8px;
+            width: 400px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeUp 0.5s forwards;
+        }
+
+        .modal-content h3 {
+            margin-top: 0;
+            color: #34495e; /* Dark gray text color */
+        }
+
+        .modal-content p {
+            color: #555; /* Medium gray text color */
+        }
+
+        .close-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #34495e; /* Dark gray button */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background-color: #2c3e50; /* Darker gray on hover */
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sessions-container">
+            <!-- Projects 1, 2, 3 -->
+            <div class="session" onclick="newDoc1()" >
+    <script>
+        function newDoc1() {
+            window.open(
+                "https://confluence.itg.ti.com/display/AWR2544/AWR2544+Area+Sheet" target="_blank");
+        }
+    </script>
+                <h3>AWR25XX</h3>
+                <p>76-81GHz FMCW satellite Radar-on-Chip sensor</p>
+            </div>
+
+
+            <div class="session" onclick="newDoc4()" >
+    <script>
+        function newDoc4() {
+            window.open(
+                "https://confluence.itg.ti.com/display/AWR2943/Area+Sheet", "_blank");
+        }
+    </script>
+                <h3>AWR29XX</h3>
+                <p>Automotive, second-generation 76-GHz to 81-GHz high-performance SoC for corner and long-range radar</p>
+            </div>
+
+
+            <div class="session" onclick="newDoc3()" >
+    <script>
+        function newDoc3() {
+            window.open(
+                "https://confluence.itg.ti.com/display/IWRL68XX/SYNTHESIS+AREA+SUMMARY", "_blank");
+        }
+    </script>
+
+                <h3>XWRL68XX</h3>
+                <p>Automotive single-chip high-performance, low-power, 57GHz to 64GHz mmWave radar sensor</p>
+            </div>
+            </div>
+
+        <div class="sessions-container">
+            <!-- Projects 4, 5, 6 -->
+            <div class="session" onclick="newDoc()" >
+    <script>
+        function newDoc() {
+            window.open(
+                "https://confluence.itg.ti.com/display/AWR2188/AREA+SHEET+XLS", "_blank");
+        }
+    </script>
+                <h3>AWR21XX</h3>
+                <p>Details about Project go here.</p>
+            </div>
+
+            <!-- Projects 4, 5, 6 -->
+            <div class="session" onclick="newDoc2()" >
+    <script>
+        function newDoc2() {
+            window.open(
+                "https://confluence.itg.ti.com/display/AWR2944PSoC/AWR2944P+Area+Sheet", "_blank");
+        }
+    </script>
+                <h3>AWR29PXX</h3>
+                <p>Automotive 76-GHz to 81-GHz single chip radar with enhanced RF and compute performance</p>
+            </div>
+            <div class="session" onclick="openModal('39XX', 'Detailed information about Project 6.')">
+                <h3>39XX</h3>
+                <p>Details about Project go here.</p>
+            </div>
+        </div>
+
+        <div class="description">
+            <h3>About Dashboard</h3>
+            <p>
+This dashboard aims in providing an accurate and comprehensive analysis of the various design 
+configurations and the associated cost by creating database from the available devices and 
+also ensures an effective tracking of final area and cost of the products with its user friendly 
+interface and interactive GUI
+Automated data synchronization is also enabled, keeping the database up-to-date with the latest project updates and user check-ins. This streamlined approach helps maintain a cohesive view of project development and progression.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h3 id="modal-title">Title</h3>
+            <p id="modal-body">Description</p>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal(title, body) {
+            const modal = document.getElementById('modal');
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-body').textContent = body;
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
